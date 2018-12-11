@@ -1,2 +1,2 @@
-# DS002
+# DSCOLORS
 Published
