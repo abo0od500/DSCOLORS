@@ -10,15 +10,13 @@ var TOKEN = process.env.TOKEN;
 let prefix = "#";
 
 client.on('message', msg => {//msg
-    if (message.channel.id === 521941966779449374) {
     if (msg.content === `الوان`) {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/501774006966419458/501774646467887105/colors.png"})
     }
-    }
+    
   });;
 
   client.on('message', message => {
-   if (message.channel.id === 521941966779449374) {
     var args = message.content.split(' ').slice(1);
     if(message.content.split(' ')[0] == `لون`){
     const embedd = new Discord.RichEmbed()
@@ -55,7 +53,7 @@ client.on('message', msg => {//msg
     
     
     }
-   }
+   
     });
   
     
