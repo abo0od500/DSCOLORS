@@ -10,7 +10,7 @@ var TOKEN = process.env.TOKEN;
 let prefix = "#";
 
 client.on('message', msg => {//msg
-    if(message.channel.id != process.env.CHANNEL) return
+    if(msg.channel.id != process.env.CHANNEL) return
     if (msg.content === `الوان`) {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/501774006966419458/501774646467887105/colors.png"})
     }
