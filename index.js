@@ -10,6 +10,7 @@ var TOKEN = process.env.TOKEN;
 let prefix = "#";
 
 client.on('message', msg => {//msg
+    if(message.channel.id != process.env.CHANNEL) return
     if (msg.content === `الوان`) {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/501774006966419458/501774646467887105/colors.png"})
     }
@@ -19,6 +20,7 @@ client.on('message', msg => {//msg
   client.on('message', message => {
     var args = message.content.split(' ').slice(1);
     if(message.content.split(' ')[0] == `لون`){
+    if(message.channel.id != process.env.CHANNEL) return
     const embedd = new Discord.RichEmbed()
     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
     .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
